@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="play()">chơi</button>
+    <script>
+        function play() {
+            alert('nhập khoảng bạn muốn đoán:');
+            let a=+prompt('từ:');
+            let b=+prompt('đến:');
+            let r = Math.floor(Math.random() * (b-a+1))+a;
+            let c=+prompt('hãy lấy số may mắn của bạn:');
+            if (c == r)
+                alert('chúc mừng bạn đoán đúng');
+            else if (c < r)
+                alert('bạn đoán thấp hơn rồi, chơi mình lại nhé!!');
+            else
+                alert('bạn đoán cao hơn rồi, chơi mình lại nhé!!');
+        }
+    </script>
+</body>
+
+</html>
